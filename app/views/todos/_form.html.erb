@@ -1,0 +1,22 @@
+<%= form_with model: @todo, local: true do |form| %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :completed %><br>
+    <%= form.check_box :completed %><br>
+  </p>
+
+  <p>
+    <%= form.label :editing %><br>
+    <%= form.check_box :editing %><br>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+
+<% end %>
