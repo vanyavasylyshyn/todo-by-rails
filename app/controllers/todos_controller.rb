@@ -63,6 +63,19 @@ class TodosController < ApplicationController
     end
   end
 
+  def destroy
+    begin
+      @user = current_user
+      @todo = @user.todos.find(params[:id])
+      @todo.destroy
+
+      redirect_to todos_path
+
+    rescue StandardError => e
+      print e.message
+    end
+  end
+
   private
 
   def todo_params

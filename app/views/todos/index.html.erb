@@ -19,6 +19,8 @@
       <td><%= todo.completed %></td>
       <td><%= todo.editing %></td>
       <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
+      <td><%= link_to 'Delete', todo_path(todo),
+                      method: :delete %></td>
     </tr>
   <% end %>
 </table>
