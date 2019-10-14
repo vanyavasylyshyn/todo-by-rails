@@ -12,21 +12,23 @@
 default: &default
   adapter: mysql2
   encoding: utf8mb4
+  host: remotemysql.com
+  port: 3306
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: hadshot21
-  socket: /tmp/mysql.sock
+  username: mEJruHcCqe
+  password: LPtwSTw92R
+
 
 development:
   <<: *default
-  database: todoAppByRails_development
+  database: mEJruHcCqe
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: todoAppByRails_test
+  database: mEJruHcCqe
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +51,6 @@ test:
 #
 production:
   <<: *default
-  database: todoAppByRails_production
-  username: todoAppByRails
+  database: mEJruHcCqe
+  username: mEJruHcCqe
   password: <%= ENV['TODOAPPBYRAILS_DATABASE_PASSWORD'] %>
