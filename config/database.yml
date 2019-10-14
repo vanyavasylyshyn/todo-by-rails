@@ -53,4 +53,4 @@ production:
   <<: *default
   database: mEJruHcCqe
   username: mEJruHcCqe
-  password: <%= ENV['LPtwSTw92R'] %>
+  password: <%= ENV['TODOAPPBYRAILS_DATABASE_PASSWORD'] %>
